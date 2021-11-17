@@ -1,0 +1,118 @@
+<?php 
+session_start();
+if(!isset($_SESSION["usuariolog"])){
+        header("Location: login.php");
+       }
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/thingspeak.png" type="image/x-icon">
+    <title>Acceso de Thingspeak</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>  
+
+
+
+
+    <header class="header" id="inicio">
+        <img class="hamburguer" src="img/hamburguesa.svg" alt="">
+        <nav class="menu-navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="home.html#footer">Contacto</a>
+                <a href="logout.php">Log Out</a>
+        </nav>
+        <div class="contenedor head">
+            <h1 class="titulo">BIENVENIDOS A SMART SHELF INVENTORY</h1>
+            <p class="copy">Registra tu cuenta con nuestro dispositivo</p>
+        </div>
+        
+    </header>
+    
+    
+    <main>
+    
+        <section class="services contenedor" id="servicio">
+            <h2 class="subtitulo">Condiciones de tu producto</h2>
+            <p>Puedes observar el comportamiento en tiempo real de la temperatura, humedad de tu producto. Adicionalmente el peso del producto disponible en el invertario.</p>
+            <div class="contenedor-servicio">
+                <img src="img/checkk.jpg" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">                       
+            </div>
+           <div>
+           
+           
+       <section class=tabla-api>
+            
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperatura&type=line&xaxis=Hora&yaxis=%C2%B0C"></iframe>
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humedad&type=line&update=15"></iframe>
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Masa&type=line&update=15"></iframe>
+      
+      
+        </section>
+        </div>
+        </div>
+        
+        
+       <section class="services contenedor" id="servicio">
+            <h2 class="subtitulo">Mejor visualización</h2>
+            <p>También puedes observar la Temperatura actual a la que está expuesta tu producto</p>
+            
+        <section class=tabla-api>
+        
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/widgets/381893"></iframe>
+            
+        </section>
+        
+            <p>El indicador rojo nos enseña cuando hay una temperatura mayor a los 26°C</p>
+         
+         
+        <section class=tabla-api>
+        
+           
+           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/widgets/381892"></iframe
+        </section>
+        
+          </section>
+         </section>
+          
+     </main>
+
+    <footer id="footer">
+        <div class="contenedor footer-content">
+                <div class="contact-us">
+                    <h2 class="brand">SMART SHELF INVENTORY</h2>
+                    <p>Monitoreamos tu inventario</p>
+                </div>
+            
+                 <div class="social-media">
+                    <a href="https://n9.cl/1weg5" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://n9.cl/l1i78" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="https://n9.cl/xl80a" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                    
+                    
+                </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
+<?php 
+session_destroy();
+?>
