@@ -41,7 +41,7 @@ if(!isset($_SESSION["usuariolog"])){
     
         <section class="services contenedor" id="servicio">
             <h2 class="subtitulo">Condiciones de tu producto</h2>
-            <p>Puedes observar el comportamiento en tiempo real de la temperatura, humedad de tu producto. Adicionalmente el peso del producto disponible en el invertario.</p>
+            <p>Puedes observar el comportamiento de la temperatura, humedad de tu producto en las últimas 12 Horas. Adicionalmente el peso del producto disponible en el invertario.</p>
             <div class="contenedor-servicio">
                 <img src="img/checkk.jpg" alt="">
                 <div class="checklist-servicio">
@@ -52,10 +52,10 @@ if(!isset($_SESSION["usuariolog"])){
            
        <section class=tabla-api>
             
-      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperatura&type=line&xaxis=Hora&yaxis=%C2%B0C"></iframe>
-      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humedad&type=line&update=15"></iframe>
-      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Masa&type=line&update=15"></iframe>
-      
+     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=2230&title=Temperatura&type=line&xaxis=Hora&yaxis=Temperatura+%28%C2%B0C%29"></iframe>
+     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=2230&title=Humedad&type=line&xaxis=Hora&yaxis=Humedad+relativa+%28%25%29"></iframe>
+     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Cantidad+del+Producto&type=line&xaxis=Hora&yaxis=Kilogramos+%28Kg%29"></iframe>
+     
       
         </section>
         </div>
@@ -63,26 +63,63 @@ if(!isset($_SESSION["usuariolog"])){
         
         
        <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Mejor visualización</h2>
-            <p>También puedes observar la Temperatura actual a la que está expuesta tu producto</p>
+            <h2 class="subtitulo">Variables actuales</h2>
+         
+         <p class="copy">La Temperatura a la que está expuesta tu producto</p>
             
         <section class=tabla-api>
         
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/widgets/381893"></iframe>
-            
-        </section>
-        
-            <p>El indicador rojo nos enseña cuando hay una temperatura mayor a los 26°C</p>
-         
-         
-        <section class=tabla-api>
-        
+           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/widgets/382448"></iframe>
            
-           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1519307/widgets/381892"></iframe
         </section>
+        
+         <p class="copy">Humedad relativa a la que está expuesta tu producto</p>
+            
+        <section class=tabla-api>
+        
+           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/widgets/382450"></iframe>
+           
+        </section>
+        
+        
+        <p class="copy">Cantidad del producto almacenada actualmente (Kg)</p>
+            
+        <section class=tabla-api>
+        
+           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/widgets/382445"></iframe>
+           
+        </section>
+        
+        
+        <p class="copy">El indicador rojo se encenderá si la Temperatura es mayor a los 25°C </p>
+            
+        <section class=tabla-api>
+        
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/widgets/382440"></iframe>
+          
+        </section>
+        
+        
+        
+       <p class="copy">El indicador amarillo se encenderá si quedan 10Kg o menos del producto almacenado</p>
+            
+        <section class=tabla-api>
+        
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1521820/widgets/382442"></iframe>
+        
+        </section>
+        
+        
+       <p class="copy">La tendencia de la cantidad del producto proximamente</p>
+            
+        <section class=tabla-api>
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1574529/widgets/382532"></iframe>
+        
+        </section>
+        
         
           </section>
-         </section>
+     
           
      </main>
 
